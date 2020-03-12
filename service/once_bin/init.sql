@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS test1 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS just_for_test DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
 
-USE test1;
+USE just_for_test;
 CREATE TABLE IF NOT EXISTS example (
     id            BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
     member_id     INT UNSIGNED    NOT NULL default 0                 COMMENT 'user id',
@@ -17,3 +17,4 @@ CREATE TABLE IF NOT EXISTS example (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 insert into example set id=0;
+
