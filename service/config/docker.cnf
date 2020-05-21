@@ -1,5 +1,4 @@
 [mysqld]
-server-id=1
 skip-host-cache
 skip-name-resolve
 character-set-client-handshake=FALSE
@@ -9,6 +8,17 @@ init-connect='SET NAMES utf8mb4'
 max-connections=20000
 max-connect-errors=10000
 open-files-limit=65535
+
+server-id=1
+log-bin=/var/lib/mysql/binlog/bin.log
+binlog-do-db=config_server
+binlog-ignore-db=meili_report_data
+log-slave-updates=1
+slave-skip-errors=1
+binlog_cache_size=1M
+binlog_format=row
+expire_logs_days=7
+max_binlog_size=100M
 
 [client]
 default-character-set=utf8mb4
