@@ -1,2 +1,1 @@
-# docker_mysql
-a mysql docker deploy scerity
+这个文件夹必须存在，否则报错

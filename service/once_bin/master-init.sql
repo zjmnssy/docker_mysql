@@ -1,0 +1,12 @@
+grant replication slave on *.* to 'slave'@'%' identified by '123456';
+
+flush privileges;
+
+create user 'maxmon'@'%' identified by '123456';
+grant replication slave,replication client on *.* to 'maxmon'@'%';
+
+create user 'maxrou'@'%' identified by '123456';
+grant select on mysql.* to 'maxrou'@'%';
+
+flush privileges;
+

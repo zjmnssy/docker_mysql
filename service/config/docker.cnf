@@ -10,15 +10,15 @@ max-connect-errors=10000
 open-files-limit=65535
 
 server-id=1
-log-bin=/var/lib/mysql/binlog/bin.log
+log-bin=/var/lib/mysql/binlog/bin-log
 binlog-do-db=config_server
 binlog-ignore-db=meili_report_data
 log-slave-updates=1
 slave-skip-errors=1
-binlog_cache_size=1M
-binlog_format=row
-expire_logs_days=7
-max_binlog_size=100M
+binlog_cache_size=32M
+binlog_format=ROW
+expire_logs_days=14
+max_binlog_size=500M
 
 [client]
 default-character-set=utf8mb4
