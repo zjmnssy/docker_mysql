@@ -5,8 +5,11 @@ flush privileges;
 create user 'maxmon'@'%' identified by '123456';
 grant replication slave,replication client on *.* to 'maxmon'@'%';
 
+flush privileges;
+
 create user 'maxrou'@'%' identified by '123456';
 grant select on mysql.* to 'maxrou'@'%';
 
 flush privileges;
+
 

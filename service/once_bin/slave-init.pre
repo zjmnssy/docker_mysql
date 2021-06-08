@@ -1,0 +1,7 @@
+change master to master_host='masterAddress',master_port=masterPort,master_user='syncAccount',master_password='syncPassword',master_log_file='binlog.000001',master_log_pos=0;
+
+flush privileges;
+
+start slave;
+
+
